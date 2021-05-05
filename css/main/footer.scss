@@ -1,0 +1,205 @@
+﻿@import "variables";
+@import "placeholders";
+
+// Start Footer //
+footer 
+{
+    background-color: $first-color;
+    .holder
+    {
+        padding: 4em 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        .footer-cols
+        {
+            .footer-cols-title
+            {
+                color: $fourth-color;
+                font-size: 14px;
+                margin: 0 0 1em 0;
+                text-transform: uppercase;
+                font-family: $font-family-en-medium;
+            }
+            .footer-list
+            {
+                .footer-item
+                {
+                    a 
+                    {
+                        font-size: 14px;
+                        color: $fifth-color;
+                        transition: all .2s;
+                        &:hover
+                        {
+                            color: $third-color;
+                        }
+                    }
+                    .address
+                    {
+                        display: inline-block;
+                        line-height: 1.2;
+                    }
+                    .email
+                    {
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+            .mid-font
+            {
+                font-family: $font-family-en-medium;
+                color: $second-color;
+            }
+        }
+        .footer-col-1   
+        {
+            width: 38%;
+            .main-logo-holder
+            {
+                .main-logo 
+                {
+                    width: 56px;
+                    height: 45px;
+                }
+            }
+            .footer-descrition
+            {
+                font-size: 14px;
+                margin-top: 1em;
+                width: 90%;
+                color: $second-color;
+            }
+        }
+        .footer-col-2, .footer-col-3, .footer-col-4 
+        {
+            width: 20%;
+        }
+    }
+    .copyright
+    {
+        border-top: 2px solid #eee;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 1.5em 0;
+        .left
+        {
+            color: $second-color;
+            margin-top: 2px;
+            h6 
+            {
+              font-size: 14px;
+              margin: 0;
+            }
+        }
+        .right
+        {
+            margin: 0 0 0 auto;
+            .social-media
+            {
+                display: flex;
+                flex-flow: row nowrap;
+                .social 
+                {
+                    margin: 0 7px;
+                    i 
+                    {
+                        color: $sixth-color;
+                        transition: all .2s;
+                        &:hover
+                        {
+                            color: $third-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// End Footer //
+
+// Start Media Query //
+@media (min-width: 769px) and (max-width: 992px)
+{
+    footer 
+    {
+        .holder
+        {
+            .footer-cols
+            {
+                .footer-cols-title
+                {
+                    font-size: 13px;
+                }
+                .footer-list
+                {
+                    .footer-item
+                    {
+                        a 
+                        {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .footer-col-1   
+            {
+                width: 35%;
+                .footer-descrition
+                {
+                    font-size: 12px;
+                }
+            }
+            .footer-col-2, .footer-col-3 ,.footer-col-4  
+            {
+                width: 21%;
+            }
+        }
+        .copyright
+        {
+            .left
+            {
+                margin-top: 4px;
+                h6 
+                {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px)
+{
+    footer 
+    {
+        .holder
+        {
+            padding: 2em 0 0;
+            .footer-cols
+            {
+                margin-bottom: 1em;
+                .footer-cols-title
+                {
+                    margin: 0 0 .5em 0;
+                }
+            }
+            .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 
+            {
+                width: 100%;
+            }
+        }
+        .copyright
+        {
+            .left
+            {
+                width: 100%;
+                text-align: center;
+            }
+            .right
+            {
+                margin: .5em auto 0;
+            }
+        }
+    }
+}
+// End Media Query //

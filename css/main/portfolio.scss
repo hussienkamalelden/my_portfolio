@@ -1,0 +1,159 @@
+﻿@import "variables";
+@import "placeholders";
+@import "navbar";
+@import "fixed-header-with-img";
+@import "estimate-project";
+@import "footer";
+
+// Start Our All Portfolio //
+.all-portfolio
+{
+    padding: 1em 0 0;
+    .holder
+    {
+        .portfolio-all-cards
+        {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            .box
+            {
+                margin-bottom: 1em;
+                .item
+                {
+                    width: 292px;
+                    height: 292px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    margin-bottom: .8em;
+                    display: flex;
+                    background-position: 50%;
+                    border-radius: 15px;
+                    outline: none;
+                    position: relative;
+                    overflow: hidden;
+                    .overlay
+                    {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border-radius: 15px;
+                        height: 100%;
+                        width: 100%;
+                        background-color: $third-color;
+                        z-index: 1;
+                        transform: translateY(100%);
+                        transition: all .2s;
+                        padding: 1.5em;
+                        .fixed-title
+                        {
+                            margin-top: 1em;
+                        }
+                        .fixed-subtitle
+                        {
+                            font-size: 20px;
+                        }
+                        .portfolio-card-description
+                        {
+                            font-size: 15px;
+                        }
+                        .fixed-title, .fixed-subtitle, .portfolio-card-description
+                        {
+                            color: white;
+                        }
+                    }
+                }
+                .project-name, .project-type
+                {
+                    font-family: $font-family-en-medium;
+                    text-transform: capitalize;
+                    padding: 0 5px;
+                    transition: all .2s;
+                }
+                .project-name
+                {
+                    color: $second-color;
+                    margin-bottom: 3px;
+                }
+                .project-type
+                {
+                    color: #a7a7a9;
+                    text-transform: uppercase;
+                    font-size: 13px;
+                }
+                &:hover
+                {
+                    .project-name
+                    {
+                        color: $fourth-color;
+                    }
+                    .overlay
+                    {
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+    }
+}
+// End Our All Portfolio //
+
+// Start Media Query //
+@media (min-width: 769px) and (max-width: 992px)
+{
+    // Start Our All Portfolio //
+    .all-portfolio
+    {
+        .holder
+        {
+            .portfolio-all-cards
+            {
+                .item
+                {
+                    width: 330px;
+                    height: 330px;
+                }
+            }
+        }
+    }
+    // End Our All Portfolio //
+}
+@media (max-width: 768px)
+{
+    // Start Our All Portfolio //
+    .all-portfolio
+    {
+        .holder
+        {
+            .portfolio-all-cards
+            {
+                .item
+                {
+                    width: 350px;
+                    height: 350px;
+                }
+            }
+        }
+    }
+    // End Our All Portfolio //
+}
+@media (max-width: 500px)
+{
+    // Start Our All Portfolio //
+    .all-portfolio
+    {
+        .holder
+        {
+            .portfolio-all-cards
+            {
+                .item
+                {
+                    width: 280px;
+                    height: 280px;
+                }
+            }
+        }
+    }
+    // End Our All Portfolio //
+}
+// End Media Query //

@@ -1,0 +1,141 @@
+﻿@import "variables";
+@import "placeholders";
+@import "navbar";
+@import "fixed-header-with-img";
+@import "estimate-project";
+@import "footer";
+
+// Start Our All Services //
+.all-services
+{
+    padding: 1em 0 0;
+    .holder
+    {
+        .services-all-cards
+        {
+            display: flex;
+            flex-flow: row wrap;
+            .service-card
+            {
+                display: flex;
+                flex-flow: column wrap;
+                width: 32%;
+                padding: 1.5em;
+                border-radius: 15px;
+                margin: 0.6%;
+                transition: all .2s;
+                .service-card-title
+                {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: $fifth-color;
+                    font-family: $font-family-en-medium;
+                    display: flex;
+                    margin: 0;
+                    &::before
+                    {
+                        content: "";
+                        height: 2px;
+                        width: 25px;
+                        background-color: #DD38B4;
+                        display: block;
+                        margin: 7px 10px 0 0;
+                    }
+                }
+                .service-card-subtitle
+                {
+                    width: 100%;
+                    font-family: $font-family-en-medium;
+                    color: $third-color;
+                    margin: .5em 0;
+                }
+                .service-card-description
+                {
+                    font-size: 15px;
+                    flex-grow: 1;
+                }
+                .read-more
+                {
+                    font-size: 14px;
+                    font-family: $font-family-en-bold;
+                    color: $second-color;
+                    display: inline-block;
+                    transition: all .2s;
+                    display: flex;
+                    &::after
+                    {
+                        content: "\203A\203A";
+                        font-size: 28px;
+                        line-height: 0.6;
+                        margin-left: 8px;
+                        font-family: $font-family-en-medium;
+                    }
+                    &:hover
+                    {
+                        color: $fourth-color;
+                    }
+                }
+                &:hover
+                {
+                    box-shadow: $regular-box-shadow;
+                }
+            }
+        }
+    }
+}
+// End Our All Services //
+
+// Start Media Query //
+@media (min-width: 769px) and (max-width: 992px)
+{
+    // Start Our All Services //
+    .all-services
+    {
+        .holder
+        {
+            .services-all-cards
+            {
+                .service-card
+                {
+                    padding: 1em;
+                    .service-card-title
+                    {
+                        font-size: 11px;
+                    }
+                    .service-card-subtitle
+                    {
+                        font-size: 18px;
+                    }
+                    .service-card-description
+                    {
+                        font-size: 14px;
+                    }
+                    .read-more
+                    {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    // End Our All Services //
+}
+@media (max-width: 768px)
+{
+    // Start Our All Services //
+    .all-services
+    {
+        .holder
+        {
+            .services-all-cards
+            {
+                .service-card
+                {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    // End Our All Services //
+}
+// End Media Query //

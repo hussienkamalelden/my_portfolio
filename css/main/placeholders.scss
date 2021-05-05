@@ -1,0 +1,214 @@
+﻿@import "variables";
+
+/* ----------- Start Loading Screen ----------- */
+.loading-screen
+{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #222;
+    top: 0%;
+    left: 0%;
+    color: white;
+    z-index: 2000;
+    .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        .loader {
+            display: block;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            width: 150px;
+            height: 150px;
+            margin: -75px 0 0 -75px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #89378B;
+            animation: spin 2s linear infinite;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                right: 5px;
+                bottom: 5px;
+                border-radius: 50%;
+                border: 3px solid transparent;
+                border-top-color: #FB8D3E;
+                animation: spin 3s linear infinite;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                right: 15px;
+                bottom: 15px;
+                border-radius: 50%;
+                border: 3px solid transparent;
+                border-top-color: #5FA556;
+                animation: spin 1.5s linear infinite;
+            }
+        }
+    }
+}
+@keyframes spin {
+    0%   {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* ----------- End Loading Screen ----------- */
+
+/* ---------- Start Button to top ----------- */
+.btn_top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    border-radius: 5px;
+    border: none !important;
+    outline: none !important;
+    background-color: $fourth-color;
+    cursor: pointer;
+    padding: 20px 25px 20px;
+    opacity: .5;
+    transition: all .5s;
+    display: none;
+    .arrow
+    {
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-135deg);
+    }
+    &:hover 
+    {
+        background-color: $fourth-color;
+        opacity: 1;
+        transform: translate(0,-5px);
+    }
+}
+/* ---------- End Button to top ----------- */
+
+
+/* ---------- Start button whatsapp ----------- */
+.whats
+{
+    position: fixed;
+    bottom: 5%;
+    left: 2%;
+    z-index: 99;
+    display: inline-block;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 50%;
+    transition: all .5s;
+    animation: zomeInOut 3s linear infinite;
+    background-color: $third-color;
+    box-shadow: 0px 0px 5px #b0afaf;
+    i
+    {
+        font-size: 45px;
+        color: $first-color;
+    }
+    &:hover 
+    {
+        background-color: $third-color-hover;
+    }
+}
+@keyframes zomeInOut {
+    0%,100%   {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.85);
+    }
+}
+/* ---------- End button whatsapp ----------- */
+
+/* Start Global */
+*
+{
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none !important;
+}
+html
+{
+  scroll-behavior: smooth;
+}
+body 
+{
+  background-color: $first-color;
+  font-family: $font-family-en-regular , sans-serif;
+}
+.sections-padding
+{
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+p 
+{
+    color: $fifth-color;
+}
+.standard-btn
+{
+    margin-top: .5em;
+    display: inline-block;
+    color: $fifth-color;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-family: $font-family-en-medium;
+    padding: 7px 25px;
+    border: 1px solid $third-color;
+    border-radius: 20px;
+    background-color: $first-color;
+    transition: all .2s;
+    &:hover
+    {
+        background-color: $third-color;
+        color: $first-color;
+    }
+}
+.fixed-title
+{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: $font-family-en-medium;
+    color: $fourth-color;
+}
+.fixed-subtitle
+{
+    font-family: $font-family-en-bold;
+    color: $second-color;
+    margin: .6em 0;
+}
+.special-subtitle
+{
+    font-family: $font-family-en-medium;
+    color: $second-color;
+    margin-top: 1em;
+}
+/* End Global */
+
+// Start Global Media Query //
+@media (min-width: 991px) 
+{
+    .container
+    {
+        max-width: 960px;
+    }
+}
+// End Global Media Query //

@@ -1,0 +1,161 @@
+﻿@import "variables";
+
+// Start NavBar //
+.navbar 
+{
+  background-color: $first-color;
+  padding: 0.7rem 1rem;
+  box-shadow: 0 0 3px #ddd;
+  .holder 
+  {
+    a 
+    {
+      img 
+      {
+        width: 56px;
+        height: 45px;
+      }
+    }
+    .navbar-toggler
+    {
+        border-color: $third-color;
+        border-width: 2px;
+        outline: none;
+        .navbar-toggler-icon
+        {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(143, 65, 213, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+    }
+    .collapse
+    {
+      .navbar-nav
+      {
+        .nav-item
+        {
+          .nav-link
+          {
+            color: $second-color;
+            text-transform: capitalize;
+            margin: 0 2px;
+            padding-top: 16px;
+            padding-bottom: 15px;
+            position: relative;
+            font-size: 15px;
+            font-family: $font-family-en-medium;
+            transition: all .2s;
+            &::after
+            {
+              content: "";
+              height: 1.5px;
+              width: 100%;
+              background-color: $fourth-color;
+              transform: scaleX(0);  
+              transition: all .2s;
+              display: block;
+            }
+            &:hover
+            {
+              color: $third-color;
+              &::after
+              {
+                transform: scaleX(1);  
+              }
+            }
+            &:last-of-type
+            {
+              .nav-link
+              {
+                margin-right: 0;
+              }
+            }
+          }
+          &:nth-of-type(6)
+          {
+            .nav-link
+            {
+              margin-right: 20px;
+            }
+          }
+          .active
+          {
+            color: $third-color;
+            &::after
+            {
+              transform: scaleX(1);  
+            }
+          }
+        }
+      }
+    }
+    .lang
+    {
+      color: $second-color;
+      border: 2px solid $fifth-color;
+      padding: 2px 6px;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 11px;
+      display: inline-block;
+      opacity: 1;
+      font-family: $font-family-ar , sans-serif;
+      border-radius: 15px;
+      transition: all .2s;
+      &:hover
+      {
+        color: $third-color;
+        border: 2px solid $third-color;
+      }
+    }
+    .collapsing 
+    {
+        transition: 0s !important;
+    }
+  }
+}
+// End NavBar //
+
+// Start Media Query //
+@media (max-width: 991.5px) 
+{
+  .navbar 
+  {
+    .holder 
+    {
+      .collapse
+      {
+        text-align: center;
+        .navbar-nav
+        {
+          .nav-item
+          {
+            .nav-link
+            {
+              margin: 3px 0 !important;
+              display: inline-block;
+              padding: 10px 0;
+              transition: none;
+              width: 250px;
+              &::after
+              {
+                display: none;
+              }
+              &:hover
+              {
+                background-color: $third-color;
+                border-radius: 20px;
+                color: $first-color;
+              }
+            }
+            .active
+            {
+              background-color: $third-color;
+              border-radius: 20px;
+              color: $first-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// End Media Query //

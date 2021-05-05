@@ -1,0 +1,193 @@
+﻿@import "variables";
+@import "placeholders";
+@import "navbar";
+@import "fixed-header";
+@import "footer";
+
+// Start Find Us //
+.find-us
+{
+    @extend .sections-padding;
+    .holder
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        .lets-talk
+        {
+            width: 54%;
+            .lets-talk-title
+            {
+                font-family: $font-family-en-bold;
+                font-size: 27px;
+                margin: 1em 0 .8em;
+            }
+            .lets-talk-form
+            {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                .inputs
+                {
+                    width: 48%;
+                    border: 1px solid $sixth-color;
+                    border-radius: 15px;
+                    height: 40px;
+                    outline: none;
+                    padding: 5px 10px;
+                }
+                .textarea-box
+                {
+                    width: 100%;
+                    margin-top: 1.3em;
+                    height: 100px;
+                    resize: none;
+                }
+                .submit
+                {
+                    @extend .standard-btn;
+                    color: $first-color;
+                    background-color: $third-color;
+                    margin-top: 2em;
+                    &:hover
+                    {
+                        background-color: $third-color-hover;
+                        border-color: $third-color-hover;
+                    }
+                }
+            }
+        }
+        .find-us-content
+        {
+            width: 40%;
+            .contacts
+            {
+                font-size: 15px;
+                padding-top: .5em;
+                .contacts-box
+                {
+                    margin-bottom: 1em;
+                    display: flex;
+                    i 
+                    {
+                        color: $fourth-color;
+                        font-size: 17px;
+                        width: 25px;
+                        margin-top: 3px;
+                    }
+                    .links
+                    {
+                        color: $fifth-color;
+                        transition: all .2;
+                        &:hover
+                        {
+                            color: $third-color;
+                        }
+                    }
+                    .email
+                    {
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+        }
+    }
+}
+// End Find Us //
+
+// Start Map Location //
+.map-location
+{
+    padding: 2em 0;
+}
+// End Map Location //
+
+// Start Media Query //
+@media (min-width: 769px) and (max-width: 992px)
+{
+    // Start Find Us //
+    .find-us
+    {
+        padding-bottom: 4em;
+        .holder
+        {
+            .lets-talk
+            {
+                .lets-talk-title
+                {
+                    font-size: 24px;
+                }
+                .lets-talk-form
+                {
+                    .textarea-box
+                    {
+                        margin-top: 1em;
+                    }
+                    .submit
+                    {
+                        margin-top: 1.5em;
+                    }
+                }
+            }
+            .find-us-content
+            {
+                .fixed-title
+                {
+                    font-size: 13px;
+                }
+                .fixed-subtitle
+                {
+                    font-size: 23px;
+                }
+                .find-us-description
+                {
+                    font-size: 15px;
+                }
+                .contacts
+                {
+                    font-size: 14px;
+                    padding-top: .5em;
+                }
+            }
+        }
+    }
+    // End Find Us //
+}
+@media (max-width: 768px)
+{
+
+    // Start Find Us //
+    .find-us
+    {
+        padding-top: 3em;
+        padding-bottom: 2em;
+        .holder
+        {
+            .lets-talk
+            {
+                width: 100%;
+                order: 2;
+                .lets-talk-title
+                {
+                    margin-bottom: 0;
+                }
+                .lets-talk-form
+                {
+                    .inputs
+                    {
+                        width: 100%;
+                        margin-top: 1.3em;
+                    }
+                }
+            }
+            .find-us-content
+            {
+                width: 100%;
+                order: 1;
+            }
+        }
+    }
+    // End Find Us //
+
+}
+// End Media Query //

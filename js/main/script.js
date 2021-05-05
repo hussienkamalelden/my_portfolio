@@ -19,6 +19,30 @@ $(window).on("load", function () {
 });
 ////////////////End Loading Screen////////////////
 
+//////////////// Start Navbar effect when scroll ////////////////
+//Check if user scrolled over than nav's height add class scrolled to class navbar ..
+$(function () {
+    'use strict';
+
+    $(window).scroll(function () {
+        var navbar = $(".navbar");
+        if ($(window).scrollTop() >= navbar.height()) {
+            //check if navbar has class scrolled or not .. (for best performance)
+            if (!navbar.hasClass("scrolled")) {
+                // add scrolled to navbar only one time ..
+                navbar.addClass('scrolled');
+            }
+        } else {
+            //check if navbar has class scrolled or not .. (for best performance)
+            if (navbar.hasClass("scrolled")) {
+                // remove scrolled to navbar only one time ..
+                navbar.removeClass('scrolled');
+            }
+        }
+    });
+});
+//////////////// End Navbar effect when scroll ////////////////
+
 ////////////////Start Scroll to top////////////////
 //Get the button
 let mybutton = document.getElementById("myBtn");
@@ -52,3 +76,10 @@ $('.navbar-nav>li>a').on('click', function () {
     $('.navbar-collapse').removeClass('show');
 });
 ////////////////////End Script for Navbar Active Tab//////////////////////
+
+//////// Start add animation to job ////////
+// add job title animation when page loaded ..
+$(window).on("load", function () {
+    $(".job-title").addClass("job-title-animation");
+});
+//////// End add animation to job ////////

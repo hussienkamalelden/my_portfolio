@@ -75,7 +75,7 @@
     border-radius: 5px;
     border: none !important;
     outline: none !important;
-    background-color: $fourth-color;
+    background-color: $primaryColor;
     cursor: pointer;
     padding: 20px 25px 20px;
     opacity: .5;
@@ -91,50 +91,12 @@
     }
     &:hover 
     {
-        background-color: $fourth-color;
+        background-color: $primaryColor;
         opacity: 1;
         transform: translate(0,-5px);
     }
 }
 /* ---------- End Button to top ----------- */
-
-
-/* ---------- Start button whatsapp ----------- */
-.whats
-{
-    position: fixed;
-    bottom: 5%;
-    left: 2%;
-    z-index: 99;
-    display: inline-block;
-    border: none !important;
-    outline: none !important;
-    cursor: pointer;
-    padding: 10px 12px;
-    border-radius: 50%;
-    transition: all .5s;
-    animation: zomeInOut 3s linear infinite;
-    background-color: $third-color;
-    box-shadow: 0px 0px 5px #b0afaf;
-    i
-    {
-        font-size: 45px;
-        color: $first-color;
-    }
-    &:hover 
-    {
-        background-color: $third-color-hover;
-    }
-}
-@keyframes zomeInOut {
-    0%,100%   {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(.85);
-    }
-}
-/* ---------- End button whatsapp ----------- */
 
 /* Start Global */
 *
@@ -151,8 +113,8 @@ html
 }
 body 
 {
-  background-color: $first-color;
-  font-family: $font-family-en-regular , sans-serif;
+  background-color: $whiteColor;
+  font-family: 'Poppins', sans-serif;
 }
 .sections-padding
 {
@@ -161,46 +123,53 @@ body
 }
 p 
 {
-    color: $fifth-color;
+    color: $firstColor;
 }
 .standard-btn
 {
-    margin-top: .5em;
-    display: inline-block;
-    color: $fifth-color;
-    text-transform: capitalize;
-    font-size: 14px;
-    font-family: $font-family-en-medium;
-    padding: 7px 25px;
-    border: 1px solid $third-color;
-    border-radius: 20px;
-    background-color: $first-color;
-    transition: all .2s;
-    &:hover
-    {
-        background-color: $third-color;
-        color: $first-color;
-    }
+    // margin-top: .5em;
+    // display: inline-block;
+    // color: $fifth-color;
+    // text-transform: capitalize;
+    // font-size: 14px;
+    // font-family: $font-family-en-medium;
+    // padding: 7px 25px;
+    // border: 1px solid $third-color;
+    // border-radius: 20px;
+    // background-color: $first-color;
+    // transition: all .2s;
+    // &:hover
+    // {
+    //     background-color: $third-color;
+    //     color: $first-color;
+    // }
 }
 .fixed-title
 {
-    font-size: 15px;
-    text-transform: uppercase;
-    font-family: $font-family-en-medium;
-    color: $fourth-color;
+    // font-size: 15px;
+    // text-transform: uppercase;
+    // font-family: $font-family-en-medium;
+    // color: $fourth-color;
 }
 .fixed-subtitle
 {
-    font-family: $font-family-en-bold;
-    color: $second-color;
-    margin: .6em 0;
+    // font-family: $font-family-en-bold;
+    // color: $second-color;
+    // margin: .6em 0;
 }
 .special-subtitle
 {
-    font-family: $font-family-en-medium;
-    color: $second-color;
-    margin-top: 1em;
+    // font-family: $font-family-en-medium;
+    // color: $second-color;
+    // margin-top: 1em;
 }
+@mixin flex($align, $justify, $flow,$wrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-flow: $flow;
+    flex-wrap: $wrap;
+  }
 /* End Global */
 
 // Start Global Media Query //

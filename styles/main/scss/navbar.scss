@@ -4,10 +4,11 @@
 .scrolled
 {
   box-shadow: 0 0 3px #ddd;
+  background-color: $thirdColor !important;
 }
 .navbar 
 {
-  background-color: $thirdColor;
+  background-color: transparent;
   padding: 0.7rem 1rem;
   .holder 
   {

@@ -85,18 +85,6 @@ p
         background-color: $primaryColor;
     }
 }
-.fixed-subtitle
-{
-    // font-family: $font-family-en-bold;
-    // color: $second-color;
-    // margin: .6em 0;
-}
-.special-subtitle
-{
-    // font-family: $font-family-en-medium;
-    // color: $second-color;
-    // margin-top: 1em;
-}
 @mixin flex($align, $justify, $flow,$wrap) {
     display: flex;
     align-items: $align;

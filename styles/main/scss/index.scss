@@ -5,6 +5,16 @@
 @import "header";
 @import "services";
 
+.why-me
+{
+    @extend .sections-padding;
+    background-color: $thirdColor;
+    .holder
+    {
+        margin-top: 3rem;
+    }
+}
+
 // Start Media Query //
 @media (max-width: 1200px)
 {

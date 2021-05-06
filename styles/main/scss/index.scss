@@ -214,20 +214,4 @@ header
     height: 570px;
   }
 }
-@media (max-width: 768px)
-{
-  header
-  {
-    height: 500px;
-    .holder
-    {
-      .scroll-btn {
-        bottom: -30%;
-      }
-      .name
-      {
-        font-size: 35px;
-      }
-    }
-  }
-}
+// End Media Query //

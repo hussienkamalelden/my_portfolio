@@ -191,3 +191,43 @@ header
 	}
 }
 // End animation for scroll down btn //
+
+
+// Start Media Query //
+@media (max-width: 1200px)
+{
+  header
+  {
+    height: 620px;
+    .holder
+    {
+      .scroll-btn {
+        bottom: -40%;
+      }
+    }
+  }
+}
+@media (max-width: 992px)
+{
+  header
+  {
+    height: 570px;
+  }
+}
+@media (max-width: 768px)
+{
+  header
+  {
+    height: 500px;
+    .holder
+    {
+      .scroll-btn {
+        bottom: -30%;
+      }
+      .name
+      {
+        font-size: 35px;
+      }
+    }
+  }
+}

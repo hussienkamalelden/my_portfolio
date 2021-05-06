@@ -12,6 +12,16 @@
 {
   overflow: hidden;
 }
+.loading-text {
+  position: absolute;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  left: 49%;
+  top: 58%;
+  margin-left: -20px;
+  color: #f3a601;
+}
 .body {
   position: absolute;
   top: 50%;

@@ -4,7 +4,7 @@
 // When the page loaded ..
 $(window).on("load", function () {
     //Fade out spinner first in 2s after page loaded ..
-    $(".loading-screen .spinner").fadeOut(1000,
+    $(".loading .run").fadeOut(2000,
         function () {
             //Reset body to overflow (auto) again after loading screen fade out ..
             $("body").css("overflow", "auto");

@@ -7,6 +7,10 @@
 @import "why_me";
 @import "skills";
 
+.paginations
+{
+  display: none;
+}
 .projects
 {
   @extend .sections-padding;
@@ -63,6 +67,29 @@
           {
             bottom: 0;
           }
+        }
+      }
+    }
+    .show-more
+    {
+      color: #fff;
+      transition: .2s all;
+      display: table;
+      margin: 1rem auto 0;
+      font-weight: 500;
+      padding: 10px 40px;
+      border: none;
+      outline: none;
+      text-transform: uppercase;
+      background-color: $fifthColor;
+      &:hover
+      {
+        background-color: $primaryColor;
+      }
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
         }
       }
     }

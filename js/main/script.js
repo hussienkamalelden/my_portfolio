@@ -84,3 +84,16 @@ $(window).on("load", function () {
     $(".job-title").addClass("job-title-animation");
 });
 //////// End add animation to job ////////
+
+//////// Start Show more ////////
+$(".show-more").click(function () {
+    $(".paginations").slideToggle();
+    var $this = $(this);
+    $this.toggleClass('toggle');
+    if ($this.hasClass('toggle')) {
+        $this.text('Less projects');
+    } else {
+        $this.text('More projects');
+    }
+});
+  //////// End Show more ////////

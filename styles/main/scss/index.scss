@@ -4,99 +4,24 @@
 @import "navbar";
 @import "header";
 @import "services";
+@import "why_me";
 
-.why-me
+.skills
 {
-    @extend .sections-padding;
-    background-color: $thirdColor;
-    .holder
-    {
-        margin-top: 4rem;
-        .left
-        {
-            .why-me-title
-            {
-                color: $firstColor;
-                font-weight: 600;
-                .why-me-title-special-box
-                {
-                    display: flex;
-                    .why-me-title-normal
-                    {
-                        margin-top: 5px;
-                    }
-                    .why-me-title-special
-                    {
-                        margin-left: 5px;
-                        .flip {
-                            height:50px;
-                            overflow:hidden;
-                          }
-                          .flip > div > div {
-                            color:#fff;
-                            padding:4px 12px;
-                            height:45px;
-                            margin-bottom:45px;
-                            display:inline-block;
-                          }
-                          .flip div:first-child {
-                            animation: show 5s linear reverse infinite;
-                          }
-                          .flip div div {
-                            background:#42c58a;
-                          }
-                          .flip div:first-child div {
-                            background:#4ec7f3;
-                          }
-                          .flip div:last-child div {
-                            background:#f13004;
-                          }
-                          @keyframes show {
-                            0%,100% {margin-top:-270px;}
-                            5%,33% {margin-top:-170px;}
-                            38%,66% {margin-top:-80px;}
-                            71%,99.99% {margin-top:0px;}
-                          }
-                    }
-                }
-            }
-            .content-holder
-            {
-                .content-card
-                {
-                    margin-top: 2rem;
-                    display: flex;
-                    .content-card-left
-                    {
-                        .content-card-icon
-                        {
-                            height: 35px;
-                            width: 35px;
-                        }
-                    }
-                    .content-card-right
-                    {
-                        margin-left: 15px;
-                        .content-card-title
-                        {
-                            font-size: 25px;
-                        }
-                        .content-card-subtitle
-                        {
-                        }
-                    }
-                }
-            }
-        }
-    }
+  @extend .sections-padding;
+  .holder
+  {
+    margin-top: 4rem;
+    
+  }
 }
 
 // Start Media Query //
-@media (max-width: 1200px)
+@media (min-width: 1200px)
 {
   
 }
-@media (max-width: 992px)
+@media (max-width: 992px) and  (min-width: 768px)
 {
   
 }

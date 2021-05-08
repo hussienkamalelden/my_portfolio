@@ -9,3 +9,13 @@
 @import "projects";
 @import "footer";
 @import "contact_me";
+
+.skills-overlay
+{
+    background-image: url(../../../assets/images/bg_dots.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

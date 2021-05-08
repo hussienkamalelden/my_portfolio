@@ -14,12 +14,14 @@
     margin-top: 4rem;
     .project-card 
     {
-      margin-bottom: 1rem;
+      margin-bottom: 1.7rem;
       .anchor-holder
       {
         position: relative;
         display: block;
         overflow: hidden;
+        border: 1px solid $fourthColor;
+        box-shadow: 0 0 7px $fourthColor;
         .project-img
         {
           position: relative;
@@ -57,6 +59,7 @@
         }
         &:hover
         {
+          border-color: $primaryColor;
           .overlay
           {
             bottom: 0;

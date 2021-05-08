@@ -64,7 +64,7 @@
                     width: 100%;
                     padding: 5px 10px;
                 }
-                .textarea-box
+                .textarea-input
                 {
                     height: 130px;
                     margin-top: 1rem;
@@ -81,12 +81,68 @@
 
 
 // Start Media Query //
-@media (min-width: 769px) and (max-width: 992px)
+@media (max-width: 1200px) and (min-width: 768px)
 {
-    
+    .contact
+    {
+        .holder
+        {
+            .right
+            {
+                .contact-subtitle
+                {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 992px) and (min-width: 768px)
+{
+    .contact
+    {
+        .holder
+        {
+            .left
+            {
+                background-image: url('../../../assets/images/contact.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 40%;
+                .contact-img
+                {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 @media (max-width: 768px)
 {
-    
+    .contact
+    {
+        .holder
+        {
+            margin-top: 3rem;
+            .right 
+            {
+                .contact-subtitle
+                {
+                    margin-top: 0;
+                    font-size: 22px;
+                }
+                .contact-form
+                {
+                    .form-holder
+                    {
+                        .email-box
+                        {
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 // End Media Query //

@@ -143,11 +143,31 @@
   {
     .holder
     {
+      .skill-special-margin
+      {
+        margin: 0 0 .5rem;
+      }
       .skill-card
       {
         .skill-content
         {
-          width: 250px;
+          width: 180px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 400px)
+{
+  .skills
+  {
+    .holder
+    {
+      .skill-card
+      {
+        .skill-content
+        {
+          width: 140px;
         }
       }
     }
